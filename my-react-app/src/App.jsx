@@ -36,16 +36,16 @@ console.log(books);
 
 
   return (
-    <>
+    <div>
    <h1>Home</h1>
-
-    <Card/>
-    <Card2/>
-    <Card3/>
+   {/* conditional rendering */}
+   {books != null && books.map((book)=>( 
+   <p> {book.attributes.title} </p>
+   <Card/>  
+   ))} 
    
-    </>
+    </div>
   )
 }
-
 
 export default App

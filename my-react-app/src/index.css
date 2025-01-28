@@ -5,3 +5,7 @@
 h1 {
   font-size: 20px;
 }
+
+.bookCard {
+  max-width: 200px;
+}
