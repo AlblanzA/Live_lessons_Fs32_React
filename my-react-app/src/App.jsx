@@ -1,5 +1,5 @@
 
-import { Card3, Card, Card2 } from './Components/Card'
+import { Card } from './Components/Card'
 import './App.css'
 import { useEffect , useState } from 'react';
 
@@ -38,12 +38,13 @@ console.log(books);
   return (
     <div>
    <h1>Home</h1>
-   {/* conditional rendering */}
+   {/* conditional rendering e ciclare elementi con Map su React anzichè con ForEach*/} 
    {books != null && books.map((book)=>( 
-   <p> {book.attributes.title} </p>
-   <Card/>  
+   // abbiamo richiamato il componente card per mostrare i libri dell'API e specifichiamo quale valore renderizzare
+   // nel nostro caso cover, title e l'id univoco richiesto da react
+   <Card key={book.id} cover={book.attributes.cover} title={book.attributes.title} /> 
+  
    ))} 
-   
     </div>
   )
 }
