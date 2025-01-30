@@ -2,6 +2,8 @@
 import { Card } from './Components/Card'
 import './App.css'
 import { useEffect , useState } from 'react';
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
 
 function App() {
   //primo valore è il nome della variabile, 
@@ -9,12 +11,14 @@ function App() {
    const [books, setBooks] = useState(null)
    const baseUrl = "https://api.potterdb.com/"
    
+   
    //useEffet è utilizzato per le azioni da fare quando il componente viene ad esempio montato
    //e allora faccio la chiamata all'API - in generale viene usata per montare un componente
    useEffect(() => {
     console.log('I have mounted!');
     fetchData()
     }, []);
+
 
    async function fetchData() {
     const response = await fetch (baseUrl + "/v1/books")
@@ -34,17 +38,22 @@ function App() {
 
 console.log(books);
 
-
+let logoFooter = 'https://www.freeiconspng.com/thumbs/harry-potter-logo/harry-potter-logo-png-19.png'
   return (
     <div>
+      <Navbar logo={logoFooter}/>
    <h1>Home</h1>
+
+   <div className='bookContainer'>  
    {/* conditional rendering e ciclare elementi con Map su React anzichè con ForEach*/} 
+
    {books != null && books.map((book)=>( 
    // abbiamo richiamato il componente card per mostrare i libri dell'API e specifichiamo quale valore renderizzare
    // nel nostro caso cover, title e l'id univoco richiesto da react
    <Card key={book.id} cover={book.attributes.cover} title={book.attributes.title} /> 
-  
    ))} 
+    </div>
+    <Footer logo={logoFooter}/>
     </div>
   )
 }
