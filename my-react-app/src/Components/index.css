@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+h1 {
+  font-size: 20px;
+}
+
+.bookCard {
+  max-width: 200px;
+}
+
+.logo{
+  max-width: 250px;
+
+}
