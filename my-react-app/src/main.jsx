@@ -4,11 +4,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./Pages/App";
 import Contatti from "./Pages/Contatti";
 import StarWars from "./Pages/StarWars";
+import Home from "./Pages/Home";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Home />,
   },
   {
     path: "about",
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "StarWars",
     element: <StarWars />,
+  },
+  {
+    path: "HarryPotter",
+    element: <App />,
   },
 ]);
 
