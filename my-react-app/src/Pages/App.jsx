@@ -1,9 +1,9 @@
 
-import { Card } from './Components/Card'
+import { Card } from '../Components/Card'
 import './App.css'
 import { useEffect , useState } from 'react';
-import Navbar from './Components/Navbar';
-import Footer from './Components/Footer';
+import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 
 function App() {
   //primo valore è il nome della variabile, 
