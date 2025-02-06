@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import { useState } from "react";
+import { Card2 } from "../Components/Card";
 
 export default function StarWars() {
   let logo =
@@ -27,25 +28,27 @@ export default function StarWars() {
     }
   }
 
+  let cover =
+    "https://media.contentapi.ea.com/content/dam/star-wars-battlefront-2/images/2019/08/swbf2-refresh-hero-large-heroes-page-luke-skywalker-16x9-xl.jpg.adapt.crop16x9.1920w.jpg";
+
   return (
     <>
       <Navbar logo={logo} />
       <Header title={"StarWars"} />
 
-      <div classname = "filmsContainer">
-    {films.lenght =!0 &&
-    films.map((film)=>(
-      <h1>{film.title} </h1>
-
-
-    ))}
-
+      <div className="filmsContainer">
+        {films.length != 0 &&
+          films.map((film) => (
+            <Card2
+              key={film.id}
+              title={film.title}
+              cover={cover}
+              text={film.opening_crawl}
+            />
+          ))}
       </div>
-
-      
 
       <Footer logo={logo} />
     </>
   );
 }
-

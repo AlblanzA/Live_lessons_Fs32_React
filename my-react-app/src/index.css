@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 h1 {
   font-size: 20px;
 }
@@ -12,7 +10,10 @@ h1 {
   max-width: 200px;
 }
 
-.logo{
+.logo {
   max-width: 250px;
+}
 
+.starwarsContainer {
+  margin-bottom: 15px;
 }
