@@ -36,18 +36,18 @@ export function Card({ cover, title }) {
   );
 }
 
-export function Card2({ cover, title, text }) {
+export function Card2({ cover, title, text, date }) {
   return (
     <>
       <article className="flex bg-white transition hover:shadow-xl starwarsContainer">
         <div className="rotate-180 p-2 [writing-mode:_vertical-lr]">
           <time
-            datetime="2022-10-10"
+            datetime={date}
             className="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
           >
-            <span>2022</span>
+            <span>{date}</span>
             <span className="w-px flex-1 bg-gray-900/10"></span>
-            <span>Oct 10</span>
+            <span></span>
           </time>
         </div>
 
