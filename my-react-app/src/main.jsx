@@ -5,6 +5,8 @@ import App from "./Pages/App";
 import Contatti from "./Pages/Contatti";
 import StarWars from "./Pages/StarWars";
 import Home from "./Pages/Home";
+import Login from "./Pages/Login";
+import Register from "./Pages/Register";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,17 @@ const router = createBrowserRouter([
     path: "HarryPotter",
     element: <App />,
   },
+  {
+    path:"Login",
+    element:<Login/>
+
+  },
+  {
+    path:"Register",
+    element:<Register/>
+
+  }
+
 ]);
 
 // lo <StrictMode> lo utilizziamo per la fase di sviluppo e di test per mostrare gli errori
